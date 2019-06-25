@@ -1,20 +1,11 @@
 class MyDummyVariable:
+  #initialize OneHotEncoder for future use when we transform data
   ohe_encoders = {}
   def __init__(self):
     pass
-  
-  def combined_dataset(self, features, categorical_ohe):
-    import numpy as np
-    #combine categorical_ohe and numeric columns
-    numeric_data = features.select_dtypes(exclude = 'object').values
-    
-    #OneHotEncoded Data 
-    ohe_data = np.concatenate([categorical_ohe, numeric_data], axis = 1)
-    return ohe_data
-  
-  #fit transform
+ 
+  #fit_transform
   def fit_transform(self, features):
-    
     from sklearn.preprocessing import LabelEncoder, OneHotEncoder
     import numpy as np
     import pandas as pd
@@ -32,7 +23,17 @@ class MyDummyVariable:
       return self.combined_dataset(features, categorical_ohe)
   
   
+  #combine data
+  def combined_dataset(self, features, categorical_ohe):
+    import numpy as np
+    #combine categorical_ohe and numeric columns
+    numeric_data = features.select_dtypes(exclude = 'object').values
+    
+    #OneHotEncoded Data 
+    ohe_data = np.concatenate([categorical_ohe, numeric_data], axis = 1)
+    return ohe_data
   
+  #transform data
   def transform(self, features):
     from sklearn.preprocessing import LabelEncoder, OneHotEncoder
     import numpy as np
