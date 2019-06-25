@@ -9,9 +9,8 @@ Original file is located at
 
 class MyDummyVariable:
   ohe_encoders = {}
-  count = 0
   def __init__(self):
-    self.count = 1
+    pass
   
   def combined_dataset(self, features, categorical_ohe):
     import numpy as np
