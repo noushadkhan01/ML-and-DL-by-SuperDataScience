@@ -1,15 +1,14 @@
 class MyDummyVariable:
+  '''it is a class to get dummy variable from a dataframe in this method we are using OneHotEncoder 
+    and this method automatically distinguish numeric and categorical columns'''
   #initialize OneHotEncoder for future use when we transform data
   ohe_encoders = {}
   def __init__(self, drop_first = True):
-    '''it is a class to get dummy variable from a dataframe in this method we are using OneHotEncoder 
-    and this method automatically distinguish numeric and categorical columns'''
     self.drop_first = drop_first
  
   #fit_transform
   def fit_transform(self, features):
-    '''fit_transform(features)
-    features must be an dataframe
+    '''features must be an dataframe
     it requires an argument features which is a dataframe containing numeric and categorical columns'''
     from sklearn.preprocessing import LabelEncoder, OneHotEncoder
     import numpy as np
@@ -42,8 +41,7 @@ class MyDummyVariable:
   
   #transform data
   def transform(self, features):
-    '''transform(features)
-    features must be an dataframe
+    '''features must be an dataframe
     it requires an argument features which is a dataframe containing numeric and categorical columns'''
     from sklearn.preprocessing import LabelEncoder, OneHotEncoder
     import numpy as np
