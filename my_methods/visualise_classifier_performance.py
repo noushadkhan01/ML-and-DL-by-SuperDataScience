@@ -27,7 +27,7 @@ def visualise_classifier_performance(X_train, X_test, y_train, y_test, classifie
   plt.title(f'{className}({important_parameter} = {imp_feat_value}) Classifier (Training set)')
   plt.xlabel('Age')
   plt.ylabel('Estimated Salary')
-  plt.legend(loc = (1.2, 0.8))
+  plt.legend(loc = (1.07, 0.8))
   plt.show()
 
   # Visualising the Test set results
@@ -42,8 +42,8 @@ def visualise_classifier_performance(X_train, X_test, y_train, y_test, classifie
   for i, j in enumerate(np.unique(y_set)):
       plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1],
                   c = ListedColormap(('red', 'green'))(i), label = j)
-  plt.title(f'{className}({important_parameter} = {imp_feat_value})Classifier (Test set)')
+  plt.title(f'{className}({important_parameter} = {imp_feat_value}) Classifier (Test set)')
   plt.xlabel('Age')
   plt.ylabel('Estimated Salary')
-  plt.legend(loc = (1.2, 0.8))
+  plt.legend(loc = (1.07, 0.8))
   plt.show()
