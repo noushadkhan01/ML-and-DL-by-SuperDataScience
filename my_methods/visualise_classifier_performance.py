@@ -1,12 +1,12 @@
-def visualise_classifier_performance(X_train, X_test, y_train, y_test, classifier, important_parameter = None, model_parameters = False):
+def visualise_classifier_performance(X_train, X_test, y_train, y_test, classifier, important_parameter = None, classifier_parameters = False):
   #import dependencies
   import matplotlib.pyplot as plt
   import numpy as np
   from matplotlib.colors import ListedColormap
-  className = model.__class__.__name__
+  className = classifier.__class__.__name__
   print(f'{className} Model \n')
-  if model_parameters:
-    print(model)
+  if classifier_parameters:
+    print(classifier)
     print('\n\n')
   # Visualising the Training set results
   if important_parameter:
