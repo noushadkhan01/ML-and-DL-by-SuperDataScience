@@ -4,7 +4,7 @@ def visualise_classifier_performance(X_train, X_test, y_train, y_test, classifie
   import numpy as np
   from matplotlib.colors import ListedColormap
   className = classifier.__class__.__name__
-  print(f'{className} Model \n')
+  print(f'{className} Classifier \n')
   if classifier_parameters:
     print(classifier)
     print('\n\n')
@@ -24,7 +24,7 @@ def visualise_classifier_performance(X_train, X_test, y_train, y_test, classifie
   for i, j in enumerate(np.unique(y_set)):
       plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1],
                   c = ListedColormap(('red', 'green'))(i), label = j)
-  plt.title(f'{className}(important_parameter = {imp_feat_value}) Classifier (Training set)')
+  plt.title(f'{className}({important_parameter} = {imp_feat_value}) Classifier (Training set)')
   plt.xlabel('Age')
   plt.ylabel('Estimated Salary')
   plt.legend(loc = 'best', bbox_to_anchor=(1.2, 0.5))
@@ -42,7 +42,7 @@ def visualise_classifier_performance(X_train, X_test, y_train, y_test, classifie
   for i, j in enumerate(np.unique(y_set)):
       plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1],
                   c = ListedColormap(('red', 'green'))(i), label = j)
-  plt.title(f'{className}(important_parameter = {imp_feat_value})Classifier (Test set)')
+  plt.title(f'{className}({important_parameter} = {imp_feat_value})Classifier (Test set)')
   plt.xlabel('Age')
   plt.ylabel('Estimated Salary')
   plt.legend(loc = 'best', bbox_to_anchor=(1.2, 0.5))
