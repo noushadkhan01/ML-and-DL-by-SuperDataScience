@@ -27,7 +27,7 @@ def visualise_classifier_performance(X_train, X_test, y_train, y_test, classifie
   plt.title(f'{className}({important_parameter} = {imp_feat_value}) Classifier (Training set)')
   plt.xlabel('Age')
   plt.ylabel('Estimated Salary')
-  plt.legend(loc = 'best', bbox_to_anchor=(1.2, 0.5))
+  plt.legend(loc = (1.2, 0.8))
   plt.show()
 
   # Visualising the Test set results
@@ -45,5 +45,5 @@ def visualise_classifier_performance(X_train, X_test, y_train, y_test, classifie
   plt.title(f'{className}({important_parameter} = {imp_feat_value})Classifier (Test set)')
   plt.xlabel('Age')
   plt.ylabel('Estimated Salary')
-  plt.legend(loc = 'best', bbox_to_anchor=(1.2, 0.5))
+  plt.legend(loc = (1.2, 0.8))
   plt.show()
