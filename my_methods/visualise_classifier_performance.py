@@ -1,7 +1,6 @@
-def visualise_classifier_performance(X_train, X_test, y_train, y_test, classifier,important_parameter = None, model_parameters = False):
+def visualise_classifier_performance(X_train, X_test, y_train, y_test, classifier, important_parameter = None, model_parameters = False):
   #import dependencies
   import matplotlib.pyplot as plt
-  %matplotlib inline
   import numpy as np
   from matplotlib.colors import ListedColormap
   className = model.__class__.__name__
